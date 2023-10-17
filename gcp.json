@@ -1,0 +1,15 @@
+{
+ "type": "service_account",
+ "project_id": "river-surf-400419",
+ "private_key_id": "395a6e2150fec0edbc53cb3f74fca4069f2a9a3d",
+ "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCfXz8yXaPJV3Rq\njmCq9Zxq0T2lim7EhH6kFI1DesoWgdtTFp5qZiB5kcnRPZL/iiM84EppwTwI10wi\nUqc2n8w9kPQh2i6pTfQDmGnvVAysIRa/XAderx0hQbR8f4vcGs9AMTN61rZA0+Zc\nrUeuDfSCfqQFGbT/hVjxxRPsY8pQG/0AoQ2WUnqDK+kygvR3ytuigoudD+4LtIV2\nzNb0WWmTp4Pg9FK3nyD3M5+J6BZlfNNQ/hz0mD4COhYHhJrJD+/Rw0eAvdu60Jd8\n94d3yr9bKr/1B3iIwopcWWusiyg8WeXdCYbAPMWTVu5xkaQGk/bWpMzj7leO+1S7\nMiZbzG2LAgMBAAECggEAAbQENaO2v3VBkKFyIE/FG7Kd/StalJQ9ZX3vtPGx+pfp\nn0MVYKMeDjc627RFQW1/xZ8ilSLV+TnQfPNqSvJPTGzaiVlWIQmrBMS0HiZ4cSvM\nJ/cuSSdYIw08Lk+wTCpauai9aAgNMeojMJPDYdDhw3ttBTo/fVPBvQ5X/zxaEHsd\n7raeTsrBJpTEsZdn9uWPD6SI5oZUIQTrn65sYrMKfrZ0vcu6m3VrMj6YV+NWevbo\nXR7rYpfcDYFli9A00KQ1rRvGLI+uJGX92yraMxY++xlAR7N4hiRorvlsfd0CbR0+\ntVwe1uDjTu0Hhd7vJRktZ1pkHqwtUHVK3iW327DKjQKBgQDahb3rNLGfVQgD/qTM\nexwccTwJ4wnH0qQb0Kb4VQIij0Y/NzG15IzmcD9ev25Pxu/aExeN3xMTlFM8bdd6\nnwWYyZnM6JNA1f7rB/J7Oy0GQGfnvw+Zp1q8ZfhuTVY5PbS0OFMKhJOaDE7OGorP\nZ1n/hHSL/J6lizkSaUEwJLXJ9QKBgQC6tH/lIh2xzTWty4zsjbmrkwaIC0BQaWXv\n/BwaBTh2Jg0Y0F/a6KXZgeMYFuKd08dp/KWkRMvFcMAXjRQHLqcKEbGni3aZYdPn\nfJvdgohSLkCNXwsydUT/kZKuO42dtNfV1H2PPs4AveL87/UQ63LYKGQxPy0yHTTd\nLbavwxEpfwKBgHaMi+XoJlyMItcX9IvCVhPQEoRCmXHAgqtcXNjoNUpOdAujg+Jr\n5Uy2pIpgTBYXlNO3+9VJqe27UBS+emHZl422ASw7GHfaIHudSh00k06K7lO5QVtY\ngU8n+sjMR/Sx1zDWRaa1GeY+uxnxKFEwfpCyaQ/wspiYmRO16lmV8NFpAoGAL7z5\nOqgneY/j2sVCCjYOtF0KfXyK/ESGyP7oXIrbLfJ6xM56w+lahqvcWgt39CzzPxlX\nbRIeHCTBKQRsi42VLlDp4NIbCAroeLb2z4ORwZmL7dnQbh1oAATDwYL+qcVUrpr/\nY8IGQFBNGqlsOuBI5BYn0CO8NaUcIDWREY3J9JcCgYBfs9064JmWwW5c+pG1AID0\nMtqVV690P8j0ZOZ81dqKscyYZKBIl+GLsr371z+6kUzgvoB8dsIrh5GlaqwoFTs8\nkpcLXPMe2HdU4M1pFTt9SV1GNMyG/1d6C+zmxaw+QR1637yMTP37jVXAex4rIq0n\nX6VIvIqS8pC7SqkcOCeUQg==\n-----END PRIVATE KEY-----\n",
+ "client_email": "sellerai@river-surf-400419.iam.gserviceaccount.com",
+ "client_id": "117908796058241224817",
+
+
+ "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+ "token_uri": "https://oauth2.googleapis.com/token",
+ "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+ "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sellerai%40river-surf-400419.iam.gserviceaccount.com",
+ "universe_domain": "googleapis.com"
+}
