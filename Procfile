@@ -1,0 +1,1 @@
+web: uvicorn app.main:app --port 8080 --reload --proxy-headers --workers 4
