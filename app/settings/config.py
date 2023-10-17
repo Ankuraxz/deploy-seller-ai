@@ -1,7 +1,6 @@
 import psycopg2
 import os
 import logging
-from square.client import Client
 from google.cloud import aiplatform
 from langchain.llms import VertexAI
 from langchain.llms import OpenAI
@@ -53,18 +52,18 @@ class Config:
         except Exception as e:
             raise Exception(f"An Exception Occurred while connecting to Postgres --> {e}")
 
-    def get_square_connection(self):
-        logger.info(f"Connecting to Square")
-        square_client = Client(access_token=self.square_access_token, environment='sandbox')
-        result = square_client.locations.list_locations()
-        if result.is_success():
-            square_location_id = result.body['locations'][0]['id']
-            logger.info(f"Connected to Square")
-            return square_client, square_location_id
-        elif result.is_error():
-            for error in result.errors:
-                raise Exception(
-                    f"Error connecting to Square --> Category :{error['category']} Code: {error['code']} Detail: {error['detail']}")
+    # def get_square_connection(self):
+    #     logger.info(f"Connecting to Square")
+    #     square_client = Client(access_token=self.square_access_token, environment='sandbox')
+    #     result = square_client.locations.list_locations()
+    #     if result.is_success():
+    #         square_location_id = result.body['locations'][0]['id']
+    #         logger.info(f"Connected to Square")
+    #         return square_client, square_location_id
+    #     elif result.is_error():
+    #         for error in result.errors:
+    #             raise Exception(
+    #                 f"Error connecting to Square --> Category :{error['category']} Code: {error['code']} Detail: {error['detail']}")
 
     def get_vertex_ai_connection(self):
         aiplatform.init(project=self.gcp_project_id, location=self.gcp_location,

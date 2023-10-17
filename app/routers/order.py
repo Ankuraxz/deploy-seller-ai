@@ -7,7 +7,6 @@ import requests
 import json
 
 from ..settings.config import Config
-from ..utils.square_payments import get_square_connection
 
 # logger
 logging.basicConfig(level=logging.INFO)

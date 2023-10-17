@@ -10,7 +10,6 @@ from typing import Annotated, Union
 from langchain.prompts import PromptTemplate
 
 from ..settings.config import Config
-from ..utils.square_payments import get_square_connection
 from ..utils.clean import cleaned
 
 

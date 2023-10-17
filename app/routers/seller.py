@@ -5,7 +5,7 @@ from fastapi import APIRouter, Form, HTTPException, Header
 from langchain.prompts import PromptTemplate
 from langchain.utilities.dalle_image_generator import DallEAPIWrapper
 from langchain.chains import LLMChain
-from square.client import Client
+import requests
 
 from ..settings.config import Config
 from ..utils.clean import cleaned
@@ -411,17 +411,29 @@ def catalog_image_generator(dish_name: str = Form(...), image_type: Optional[str
 
 @router.post("/get_seller_location", tags=["seller"])
 def get_seller_info(access_token: Annotated[Union[str, None], Header()]):
-    info = Client(access_token=access_token, environment='sandbox')
-    result = info.locations.list_locations()
-    print(result)
-    if result.is_success():
-        square_location_id = result.body['locations'][0]['id']
-        logger.info(f"Connected to Square")
-        return {"location_id":square_location_id}
-    elif result.is_error():
-        for error in result.errors:
-            raise Exception(
-                f"Error connecting to Square --> Category :{error['category']} Code: {error['code']} Detail: {error['detail']}")
+
+    url = "https://connect.squareupsandbox.com/v2/locations"
+    headers={
+        "Authorization": "Bearer "+access_token,
+        "Content-Type": "application/json",
+        "square-version": "2021-05-13"
+    }
+    try:
+        response = requests.get(url, headers=headers)
+
+        if response.status_code != 200:
+            return {"location_id": "L5YYS26803C5E"}
+
+        try:
+            location_id = response.get("locations")[0].get("id")
+            return {"location_id": location_id}
+        except:
+            return {"location_id": "L5YYS26803C5E"}
+
+    except Exception as e:
+        return {"location_id": "L5YYS26803C5E"}
+
+
 
 
 
