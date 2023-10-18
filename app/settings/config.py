@@ -9,6 +9,12 @@ from langchain.llms import OpenAIChat
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
+keepalive_kwargs = {
+    "keepalives": 1,
+    "keepalives_idle": 30,
+    "keepalives_interval": 5,
+    "keepalives_count": 5,
+}
 
 class Config:
     _instance = None
@@ -46,7 +52,7 @@ class Config:
     def get_postgres_connection(self):
         try:
             conn = psycopg2.connect(host=self.host, dbname=self.dbname, user=self.user, password=self.password,
-                                    port=self.port)
+                                    port=self.port, **keepalive_kwargs)
             logger.info(f"Connected to Postgres")
             return conn
         except Exception as e:
