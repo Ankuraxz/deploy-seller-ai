@@ -38,7 +38,6 @@ class Config:
             self.port = "5432"
             self.user = "postgres"
             self.password = os.environ.get('SUPABASE_DB')
-            self.square_access_token = os.environ.get('SQUARE_ACCESS_TOKEN')
             self.square_applicationid = "sandbox-sq0idb-qqw1PDXOq16d403omj_1_g"
             self.gcp_json = os.environ.get('GOOGLE_APPLICATION_CREDENTIALS')
             self.gcp_project_id = "river-surf-400419"
